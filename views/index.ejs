@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--head-->
+<%- include ("./partials/head") %>
+
+    <body>
+
+        <!--header-->
+        <%- include ("./partials/header") %>
+
+            <main class="main">
+                
+                <section>
+
+                    <h2>Agenda</h2>
+
+                    <div class="cabecera-lista">
+                        <a href="/contactoCreate"><i class="fa-solid fa-user-plus"></i></a>
+                    
+                        <div class="busqueda">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" name="buscador" id="buscador" placeholder="Buscar...">
+                        </div>
+                    
+                    </div>
+                    
+                    
+                    <ul class="listaAgenda">
+
+                        <% agenda.forEach(element=> { %>
+                            
+                            <li class="item"></i><a href="/contacto/<%= element.id %>"><%= element.nombre %> <%= element.apellido %></a></li>  
+
+                        <% }) %>
+
+                    </ul>
+                    
+                </section>
+
+            </main>
+
+            <!--footer-->
+            <%- include ("./partials/footer") %>
+            <script src="/js/buscar.js"></script>
+    </body>
+
+</html>

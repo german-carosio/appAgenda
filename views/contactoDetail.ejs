@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--head-->
+<%- include ("./partials/head")  %> 
+
+<body>
+
+    <!--header-->
+    <%- include ("./partials/header")  %> 
+
+    <main class="main">
+        
+        <section>
+
+            <a href="/"><i class="fa-solid fa-chevron-left"></i></a>
+
+            <h2>Detalle de Contacto</h2>
+
+            <article class="contactDetail">
+
+                <p>Nombre: <%= contacto.nombre %></p>
+                <p>Apellido: <%= contacto.apellido %></p>
+                <p>Teléfono: <%= contacto.telefono %></p>
+                <p>Dirección: <%= contacto.direccion %></p>
+                <p>Email: <%= contacto.email %></p>
+
+            </article>
+
+            <a href="/contactoEdit/<%= contacto.id %>"><button><i class="fa-solid fa-pen-to-square"></i></button></a>
+            <button><i class="fa-solid fa-trash"></i></button>
+
+        </section>
+        
+    </main>
+
+    <!--footer-->
+    <%- include ("./partials/footer")  %> 
+
+</body>
+</html>

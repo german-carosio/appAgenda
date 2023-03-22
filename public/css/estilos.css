@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    /*Colores*/
+    --color1: #000;
+    --color2: #fff;
+    --color3: #8C52FF;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*GENERALES*/
+
+body {
+    font-size: 16px;
+    width: 100vw;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+h3 {
+    font-size: 1.1em;
+}
+
+p, label, input, button, textarea {
+    font-size: 1em;
+}
+
+a,li {
+    list-style: none;
+    text-decoration: none;
+    font-size: 1em;
+    color: var(--color1);
+}
+
+/*HEADER*/
+
+.header {
+    padding: 20px;
+}
+
+.header i {
+    color: var(--color3);
+}
+
+/*MAIN*/
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    
+    border-radius: 6px;
+    padding: 20px;
+    width: 80%;
+}
+
+.cabecera-lista {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.busqueda { 
+    width: 50%;
+    border: grey solid 1px;
+    border-radius: 6px;
+    padding: 6px;
+}
+
+.busqueda input {
+    border: none;
+    border-left: solid 1px grey;
+    margin-left: 5px;
+    padding-left: 8px;  
+    outline: none;
+}
+
+.listaAgenda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.item {
+    border: grey solid 1px;
+    border-radius: 6px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+
+/*Forms*/
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Buscador*/
+
+.filtro {
+    display: none;
+}
