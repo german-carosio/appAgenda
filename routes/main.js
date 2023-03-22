@@ -19,5 +19,8 @@ router.post("/contactoCreate", MainController.contactoSave)
 router.get("/contactoEdit/:id", MainController.contactoEdit);
 router.put("/contactoEdit/:id", MainController.contactoUpdate);
 
+//eliminar contacto
+router.delete("/delete/:id", MainController.contactoDelete)
+
 //exportar el router
 module.exports = router;

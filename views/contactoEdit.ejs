@@ -18,7 +18,7 @@
             
             <h2>Editar Contacto</h2>
 
-            <form action="/contactoEdit/:<%= contacto.id %>?_method=PUT" method="POST">
+            <form action="/contactoEdit/<%= contacto.id %>?_method=PUT" method="POST">
                 
                 <label for="nombre">Nombre</label>
                 <input type="text" name="nombre" id="nombre" value="<%= contacto.nombre %>">

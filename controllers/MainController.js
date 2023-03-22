@@ -30,7 +30,7 @@ let MainController = {
         res.render('index', {agenda: agenda});
        },
     
-    
+    //Detalle del contacto
     contactoDetail: (req,res) => {
         leerJson();
         const contacto = agenda.find(element =>{
@@ -41,6 +41,7 @@ let MainController = {
        
     //Creacion de usuario
     contactoCreate: (req,res) => {
+        
        res.render('contactoCreate');
     },
 
@@ -87,7 +88,8 @@ let MainController = {
         leerJson();
            
         agenda.forEach(element => {
-                     
+
+
             if (element.id === parseInt(req.params.id)) {
                 element.nombre = req.body.nombre;
                 element.apellido = req.body.apellido;
@@ -102,6 +104,22 @@ let MainController = {
 
         res.redirect('/')
     },
+
+    //Eliminar contacto
+    contactoDelete : (req,res) => {
+
+        leerJson();
+
+          const eliminar = agenda.filter(element =>{
+              return element.id !== parseInt(req.params.id)
+          });
+
+          agenda = eliminar;
+
+          escribirJson();
+
+          res.redirect("/");
+    }
      
    
 }

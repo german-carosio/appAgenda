@@ -3,7 +3,7 @@
 		"id": 1,
 		"nombre": "Ramon",
 		"apellido": "Perez",
-		"telefono": 1165458974,
+		"telefono": "1165458974",
 		"direccion": "Av Cabildo 2356",
 		"email": "nombre@gmail.com"
 	},
@@ -19,14 +19,6 @@
 		"id": 3,
 		"nombre": "Jose",
 		"apellido": "Gomez",
-		"telefono": 1165458974,
-		"direccion": "Av Cabildo 2356",
-		"email": "nombre@gmail.com"
-	},
-	{
-		"id": 4,
-		"nombre": "Manuel",
-		"apellido": "Herrera",
 		"telefono": 1165458974,
 		"direccion": "Av Cabildo 2356",
 		"email": "nombre@gmail.com"
