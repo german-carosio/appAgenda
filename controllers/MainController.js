@@ -84,7 +84,23 @@ let MainController = {
        
     contactoUpdate: (req,res) => {
 
-      res.redirect('/')
+        leerJson();
+           
+        agenda.forEach(element => {
+                     
+            if (element.id === parseInt(req.params.id)) {
+                element.nombre = req.body.nombre;
+                element.apellido = req.body.apellido;
+                element.telefono = req.body.telefono;
+                element.direccion = req.body.direccion;
+                element.email = req.body.email;
+            }
+             
+        });
+        
+        escribirJson();
+
+        res.redirect('/')
     },
      
    
