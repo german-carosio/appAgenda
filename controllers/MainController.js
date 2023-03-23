@@ -32,6 +32,7 @@ let MainController = {
     
     //Detalle del contacto
     contactoDetail: (req,res) => {
+        
         leerJson();
         const contacto = agenda.find(element =>{
             return element.id === parseInt(req.params.id);
@@ -50,8 +51,13 @@ let MainController = {
 
         leerJson();
 
-        let ultimoContacto = agenda.length -1;
-        let nuevoId = agenda[ultimoContacto].id + 1;
+        let ultimoContacto = agenda.length-1; 
+                
+        let nuevoId;
+
+        agenda.length === 0 ? nuevoId = 1 : nuevoId = agenda[ultimoContacto].id + 1; 
+
+        
 
         let contactoNuevo = {
 
@@ -63,7 +69,7 @@ let MainController = {
             email: req.body.email
 
         };
-
+        
         agenda.push(contactoNuevo);
 
         escribirJson();
@@ -75,6 +81,7 @@ let MainController = {
 
     //Edición de contacto
     contactoEdit: (req,res) => {
+
         leerJson();
         const contacto = agenda.find(element =>{
             return element.id === parseInt(req.params.id);

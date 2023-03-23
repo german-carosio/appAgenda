@@ -1,26 +1,18 @@
 [
 	{
 		"id": 1,
-		"nombre": "Ramon",
-		"apellido": "Perez",
-		"telefono": "1165458974",
-		"direccion": "Av Cabildo 2356",
-		"email": "nombre@gmail.com"
+		"nombre": "Manuel",
+		"apellido": "Herrera",
+		"telefono": "1165489651",
+		"direccion": "Conesa 2524 2° B",
+		"email": "manuelherrera@gmail.com"
 	},
 	{
 		"id": 2,
-		"nombre": "juan",
-		"apellido": "Ramirez",
-		"telefono": 1165458974,
-		"direccion": "Av Cabildo 2356",
-		"email": "nombre@gmail.com"
-	},
-	{
-		"id": 3,
-		"nombre": "Jose",
-		"apellido": "Gomez",
-		"telefono": 1165458974,
-		"direccion": "Av Cabildo 2356",
-		"email": "nombre@gmail.com"
+		"nombre": "Agustina",
+		"apellido": "Pugliese",
+		"telefono": "1158452145",
+		"direccion": "Niceto Vega 25 1° A",
+		"email": "aguspu@gmail.com"
 	}
 ]
