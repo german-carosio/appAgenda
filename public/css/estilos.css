@@ -119,6 +119,20 @@ form {
     flex-direction: column;
 }
 
+form input {
+    border-radius: 6px;
+    border: solid 1px grey;
+    padding: 5px;
+}
+
+/*Express Validator*/
+.invalido{
+    border: solid 1px red;
+}
+.invalido2 {
+    color: red;
+}
+
 /*Buscador*/
 
 .filtro {

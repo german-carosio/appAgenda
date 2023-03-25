@@ -1,8 +1,7 @@
 //importo fs/path
 const fs = require('fs');
 const path = require('path');
-
-
+const { validationResult } = require('express-validator')
 
 let agenda;
 
@@ -49,7 +48,17 @@ let MainController = {
     
     contactoSave: (req,res) => {
 
-        leerJson();
+        const resultValidations = validationResult(req);
+
+        
+        if (resultValidations.errors.length > 0) {
+
+            return res.render('contactoCreate', {
+                errors: resultValidations.mapped(),
+                oldData: req.body
+            })
+        } else {
+            leerJson();
 
         let ultimoContacto = agenda.length-1; 
                 
@@ -75,6 +84,7 @@ let MainController = {
         escribirJson();
 
         res.redirect("/")
+        }       
       
     },
      

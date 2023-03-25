@@ -1,29 +1,19 @@
-//importar express
-const express = require('express');
-//importo method override para put y delete
-const methodOverride = require('method-override');
+const express = require('express');//importar express
+const methodOverride = require('method-override');//importo method override para put y delete
+const mainRouter = require ('./routes/main');//importar el router
 
-//importar el router
-const mainRouter = require ('./routes/main');
+const app = express();//declaro express
+const port = 3000;//declaro el puerto
 
-//declaro express y el puerto
-const app = express();
-const port = 3000;
-
-//usando metodo post (viene con paquete node)
-app.use(express.urlencoded({ extended : false}));
-app.use(express.json());
-//usando metodo put y delete
-app.use(methodOverride('_method'));
-//archivos estaticos
-app.use(express.static("public"));
-
-//template engine - motor de plantillas (en este caso ejs)
-app.set('view engine','ejs')
+app.use(express.urlencoded({ extended : false}));//usando metodo post (viene con paquete node)
+app.use(express.json());//para usar json con metodo post
+app.use(methodOverride('_method'));//usando metodo put y delete
+app.use(express.static("public"));//archivos estaticos
 
 //usar los get del router
 app.use("/", mainRouter);
 
+app.set('view engine','ejs')//template engine - motor de plantillas (en este caso ejs)
 
 //levantar servidor 
 app.listen(process.env.PORT || port, () => {
