@@ -1,7 +1,4 @@
 https://www.youtube.com/watch?v=s3pC93LgP18 // validaciones del front
 
-https://www.youtube.com/watch?v=ypUFAa6ee7g // VPS para subir proyectos node js
 
-https://www.youtube.com/watch?v=nJ1Hx5HmgHs // oracle cloud infraestructure
-
-subiendo en VERCEL.COM
+https://www.youtube.com/watch?v=bnCOyGaSe84 // deploy con RENDER
