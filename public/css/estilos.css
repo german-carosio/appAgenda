@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@100&display=swap');
 
 :root {
     /*Colores*/
     --color1: #000;
     --color2: #fff;
-    --color3: #8C52FF;
+    --color3: #171717;
+    --color4: #2D2D2D;
 }
 
 *{
@@ -18,7 +20,9 @@
 
 body {
     font-size: 16px;
-    width: 100vw;
+    width: 100%;
+    color: var(--color2);
+    background-color: var(--color1);
 }
 
 h1 {
@@ -26,73 +30,122 @@ h1 {
 }
 
 h2 {
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 h3 {
-    font-size: 1.1em;
+    font-size: 1em;
 }
 
 p, label, input, button, textarea {
     font-size: 1em;
 }
 
+input {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
 a,li {
-    list-style: none;
     text-decoration: none;
     font-size: 1em;
-    color: var(--color1);
+    color: var(--color2);
 }
+
+i {
+    color: var(--color2);
+}
+
 
 /*HEADER*/
 
 .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
 }
 
-.header i {
-    color: var(--color3);
+header .logo i {
+    font-size: 1.3em;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 /*MAIN*/
 
 .main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-top: 70px;
 }
 
-.main section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    
-    border-radius: 6px;
-    padding: 20px;
-    width: 80%;
-}
-
-.cabecera-lista {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+.titulo-section {
     margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.contenedor-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*border: solid red 1px;*/
+    width: 100%;
+}
+
+.cabecera {
+   width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    gap: 20px;
+    
+}
+
+.botones-cabecera { 
+    display: flex;
+    gap: 20px;
+    justify-content: right;
+}
+
+.fa-user-plus, .fa-magnifying-glass {
+    font-size: 1.5em;
+    cursor: pointer;
 }
 
 .busqueda { 
-    width: 50%;
-    border: grey solid 1px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: var(--color3);
     border-radius: 6px;
     padding: 6px;
 }
 
+.busqueda .fa-magnifying-glass {
+    display: none;
+}
+
 .busqueda input {
-    border: none;
-    border-left: solid 1px grey;
-    margin-left: 5px;
-    padding-left: 8px;  
+    border: none; 
     outline: none;
+    padding: 6px;
+    width: 90%;
+    background: none;
+    color: var(--color2);
+}
+
+.fa-x {
+    padding-right: 10px;
 }
 
 .listaAgenda {
@@ -100,29 +153,85 @@ a,li {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    width: 100%;
+    width: 90%;
+    margin-bottom: 20px;
+    background-color: var(--color3);
+    border-radius: 15px;
+    padding: 10px;
 }
 
 .item {
-    border: grey solid 1px;
-    border-radius: 6px;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
-    width: 100%;
+    width: 80%;
+    border-bottom: solid 1px var(--color4);
 }
 
+.item:last-child {
+    border: none;
+}
+
+
+/* -- Vistas que no son index -- */
+
+.cabecera-noIndex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.cabecera-noIndex .fa-chevron-left {
+    cursor: pointer;
+}
+
+/*Contacto Detail*/
+
+.contactoDetail {
+    background-color: var(--color3);
+    padding: 20px;
+    border-radius: 15px;
+}
+.contactoDetail div {
+    display: flex;
+    gap: 10px;
+}
+
+.detail-botons { 
+    margin-top: 30px;
+    display: flex;
+    gap: 40px;
+}
+
+.detail-botons button {
+    border: none;
+    background: none;
+}
+
+.detail-botons button i {
+    font-size: 1.5em;
+    cursor: pointer;
+}
 
 /*Forms*/
 
 form {
     display: flex;
     flex-direction: column;
+    width: 90%;
 }
 
 form input {
     border-radius: 6px;
     border: solid 1px grey;
     padding: 5px;
+}
+form label {
+    padding-bottom: 5px;
+    margin-top: 10px;
+}
+form .submit {
+    margin-top: 10px;
 }
 
 /*Express Validator*/
@@ -138,3 +247,30 @@ form input {
 .filtro {
     display: none;
 }
+
+/*MEDIAS*/
+
+
+
+@media (min-width: 480px){
+    
+}
+
+@media (min-width: 768px){
+
+
+}
+@media (min-width: 1024px){
+
+
+
+}
+@media (min-width: 1280px){
+
+
+    
+}
+@media (min-width: 1600px){
+
+}
+

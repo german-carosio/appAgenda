@@ -1,18 +1,22 @@
 [
 	{
 		"id": 1,
-		"nombre": "Manuel",
-		"apellido": "Herrera",
-		"telefono": "1165489651",
-		"direccion": "Conesa 2524 2° B",
-		"email": "manuelherrera@gmail.com"
+		"nombre": "Jorge",
+		"apellido": "Perez",
+		"telefono": "1154825489",
+		"direccion": "Matienzo 5865 4° C",
+		"email": "jorgeperez@gmail.com.ar",
+		"fechaNacimiento": "2022-02-10",
+		"creador": 1
 	},
 	{
 		"id": 2,
-		"nombre": "Agustina",
-		"apellido": "Pugliese",
-		"telefono": "1158452145",
-		"direccion": "Niceto Vega 25 1° A",
-		"email": "aguspu@gmail.com"
+		"nombre": "a",
+		"apellido": "a",
+		"telefono": "1154825489",
+		"direccion": "Matienzo 5865 4° C",
+		"email": "manuelherrera@gmail.com",
+		"fechaNacimiento": "2022-12-07",
+		"creador": 1
 	}
 ]

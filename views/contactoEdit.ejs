@@ -2,47 +2,54 @@
 <html lang="en">
 
 <!--head-->
-<%- include ("./partials/head")  %> 
+<%- include ("./partials/head") %>
 
-<body>
+    <body>
 
-    <!--header-->
-    <%- include ("./partials/header")  %> 
+        <!--header-->
+        <%- include ("./partials/header") %>
 
-    <main class="main">
-        
-       
-        <section>
+            <main class="main">
 
-            <a href="/"><i class="fa-solid fa-chevron-left"></i></a>
-            
-            <h2>Editar Contacto</h2>
+                <section class="section">
 
-            <form action="/contactoEdit/<%= contacto.id %>?_method=PUT" method="POST">
-                
-                <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="nombre" value="<%= contacto.nombre %>">
-        
-                <label for="apellido">Apellido</label>
-                <input type="text" name="apellido" id="apellido" value="<%= contacto.apellido %>">
-        
-                <label for="telefono">teléfono</label>
-                <input type="text" name="telefono" id="telefono" value="<%= contacto.telefono %>">
-        
-                <label for="direccion">Dirección</label>
-                <input type="text" name="direccion" id="direccion" value="<%= contacto.direccion %>">
-        
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email" value="<%= contacto.email %>">
-                
-                <input type="submit" value="Editar">
-            </form>
-        </section>
-        
-    </main>
+                    <div class="cabecera-noIndex">
+                        <a href="/"><i class="fa-solid fa-chevron-left"></i></a>
+                        <h2 class="titulo-section">Editar Contacto</h2>
+                    </div>
 
-    <!--footer-->
-    <%- include ("./partials/footer")  %> 
+                    <div class="contenedor-section">
+                        <form action="/contactoEdit/<%= contacto.id %>?_method=PUT" method="POST">
 
-</body>
+                            <label for="nombre">Nombre</label>
+                            <input type="text" name="nombre" id="nombre" value="<%= contacto.nombre %>">
+
+                            <label for="apellido">Apellido</label>
+                            <input type="text" name="apellido" id="apellido" value="<%= contacto.apellido %>">
+
+                            <label for="telefono">teléfono</label>
+                            <input type="text" name="telefono" id="telefono" value="<%= contacto.telefono %>">
+
+                            <label for="direccion">Dirección</label>
+                            <input type="text" name="direccion" id="direccion" value="<%= contacto.direccion %>">
+
+                            <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                            <input type="date" name="fechaNacimiento"
+                                id="fechaNacimiento" value="<%= contacto.fechaNacimiento %>">
+
+                            <label for="email">Email</label>
+                            <input type="text" name="email" id="email" value="<%= contacto.email %>">
+
+                            <input class="submit" type="submit" value="Editar">
+                        </form>
+                    </div>
+                </section>
+
+            </main>
+
+            <!--footer-->
+            <%- include ("./partials/footer") %>
+
+    </body>
+
 </html>

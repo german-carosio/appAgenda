@@ -2,42 +2,100 @@
 <html lang="en">
 
 <!--head-->
-<%- include ("./partials/head")  %> 
+<%- include ("./partials/head") %>
 
-<body>
+    <script>
+        function confirmDelete() {
 
-    <!--header-->
-    <%- include ("./partials/header")  %> 
+            let respusta = confirm('¿Desea eliminar el contacto?');
 
-    <main class="main">
-        
-        <section>
+            if (respusta == true) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
 
-            <a href="/"><i class="fa-solid fa-chevron-left"></i></a>
+    <body>
 
-            <h2>Detalle de Contacto</h2>
+        <!--header-->
+        <%- include ("./partials/header") %>
 
-            <article class="contactDetail">
+            <main class="main">
 
-                <p>Nombre: <%= contacto.nombre %></p>
-                <p>Apellido: <%= contacto.apellido %></p>
-                <p>Teléfono: <%= contacto.telefono %></p>
-                <p>Dirección: <%= contacto.direccion %></p>
-                <p>Email: <%= contacto.email %></p>
+                
+                <section class="section">
 
-            </article>
+                    <div class="cabecera-noIndex">
+                        <a href="/"><i class="fa-solid fa-chevron-left"></i></a>
+                        <h2 class="titulo-section">Detalle de Contacto</h2>
+                    </div>
+                    
+                    <div class="contenedor-section">
 
-            <a href="/contactoEdit/<%= contacto.id %>"><button><i class="fa-solid fa-pen-to-square"></i></button></a>
+                        <article class="contactoDetail">
+                            <div>
+                                <h4>Nombre:</h3>
+                                    <p>
+                                        <%= contacto.nombre %>
+                                    </p>
+                            </div>
 
-            <form action="/delete/<%= contacto.id %>?_method=DELETE" method="POST">
-                <button type="submit"><i class="fa-solid fa-trash"></i></button>
-            </form>
-        </section>
-        
-    </main>
+                            <div>
+                                <h4>Apellido:</h3>
+                                    <p>
+                                        <%= contacto.apellido %>
+                                    </p>
+                            </div>
 
-    <!--footer-->
-    <%- include ("./partials/footer")  %> 
+                            <div>
+                                <h4>Teléfono:</h3>
+                                    <p>
+                                        <%= contacto.telefono %>
+                                    </p>
+                            </div>
 
-</body>
+                            <div>
+                                <h4>Dirección:</h3>
+                                    <p>
+                                        <%= contacto.direccion %>
+                                    </p>
+                            </div>
+
+                            <div>
+                                <h4>Fecha de Nacimiento:</h3>
+                                    <p>
+                                        <%= contacto.fechaNacimiento %>
+                                    </p>
+                            </div>
+
+                            <div>
+                                <h4>Email:</h3>
+                                    <p>
+                                        <%= contacto.email %>
+                                    </p>
+                            </div>
+
+                        </article>
+
+                        <div class="detail-botons">
+                            <a href="/contactoEdit/<%= contacto.id %>"><button><i
+                                        class="fa-solid fa-pen-to-square"></i></button></a>
+
+                            <form action="/delete/<%= contacto.id %>?_method=DELETE" method="POST">
+                                <button type="submit" onclick='return confirmDelete()'><i
+                                        class="fa-solid fa-trash"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+
+            <!--footer-->
+            <%- include ("./partials/footer") %>
+
+    </body>
+
 </html>

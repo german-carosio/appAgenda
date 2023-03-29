@@ -11,31 +11,41 @@
 
             <main class="main">
                 
-                <section>
+                <section class="section">
+                
+                    <h2 class="titulo-section">Agenda</h2>
+                
+                    <div class="contenedor-section">
+                
+                        <div class="cabecera">
 
-                    <h2>Agenda</h2>
-
-                    <div class="cabecera-lista">
-                        <a href="/contactoCreate"><i class="fa-solid fa-user-plus"></i></a>
-                    
-                        <div class="busqueda">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                            <input type="text" name="buscador" id="buscador" placeholder="Buscar...">
-                        </div>
-                    
-                    </div>
-                    
-                    
-                    <ul class="listaAgenda">
-
-                        <% agenda.forEach(element=> { %>
+                            <div class="botones-cabecera">
+                                <a href="/contactoCreate"><i class="fa-solid fa-user-plus"></i></a>
+                                <i  onclick="mostrarBusqueda()" class="fa-solid fa-magnifying-glass"></i>
+                            </div>
                             
-                            <li class="item"></i><a href="/contacto/<%= element.id %>"><%= element.nombre %> <%= element.apellido %></a></li>  
-
-                        <% }) %>
-
-                    </ul>
-                    
+                            <div id="busqueda" class="busqueda">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input type="text" name="buscador" id="buscador" placeholder="Buscar...">
+                                <i onclick="ocultarBusqueda()" class="fa-solid fa-x"></i>
+                            </div>
+                
+                        </div>
+                
+                
+                        <ul class="listaAgenda">
+                
+                            <% agenda.forEach(element=> { %>
+                
+                                <li class="item"></i><a href="/contacto/<%= element.id %>">
+                                        <%= element.nombre %>
+                                            <%= element.apellido %>
+                                    </a></li>
+                
+                                <% }) %>
+                
+                        </ul>
+                    </div>
                 </section>
 
             </main>

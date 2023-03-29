@@ -1,0 +1,17 @@
+[
+	{
+		"id": 1,
+		"nombre": "Luis",
+		"apellido": "Herrera",
+		"email": "1165485555",
+		"password": "123456"
+	},
+	
+	{
+		"id": 2,
+		"nombre": "Jorge",
+		"apellido": "Perez",
+		"email": "1165489651",
+		"password": "123456"
+	}
+]
