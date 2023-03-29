@@ -2,3 +2,5 @@ https://www.youtube.com/watch?v=s3pC93LgP18 // validaciones del front
 
 
 https://www.youtube.com/watch?v=bnCOyGaSe84 // deploy con RENDER
+
+https://dashboard.render.com/web/srv-cgi80aqk728gl5vslc50/deploys/dep-cgi87iseoogvqrkg3jbg // link de proyecto en RENDER
