@@ -11,12 +11,12 @@
 	},
 	{
 		"id": 2,
-		"nombre": "a",
-		"apellido": "a",
-		"telefono": "1154825489",
-		"direccion": "Matienzo 5865 4° C",
-		"email": "manuelherrera@gmail.com",
-		"fechaNacimiento": "2022-12-07",
+		"nombre": "Ramona",
+		"apellido": "Herrera",
+		"telefono": "1165489651",
+		"direccion": "Conesa 2524 2° B",
+		"email": "mengano@Apolo.com.ar",
+		"fechaNacimiento": "2023-03-09",
 		"creador": 1
 	}
 ]
