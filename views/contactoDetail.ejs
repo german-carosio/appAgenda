@@ -27,68 +27,43 @@
                 
                 <section class="section">
 
-                    <div class="cabecera-noIndex">
+                    <article class="cabecera-noIndex">
+
                         <a href="/"><i class="fa-solid fa-chevron-left"></i></a>
-                        <h2 class="titulo-section">Detalle de Contacto</h2>
-                    </div>
+                        <h2>Detalle de contacto</h2>
+                       
+                    </article>
                     
-                    <div class="contenedor-section">
+                    
+                    <article class="listaContactos">
 
-                        <article class="contactoDetail">
-                            <div>
-                                <h4>Nombre:</h3>
-                                    <p>
-                                        <%= contacto.nombre %>
-                                    </p>
-                            </div>
-
-                            <div>
-                                <h4>Apellido:</h3>
-                                    <p>
-                                        <%= contacto.apellido %>
-                                    </p>
-                            </div>
-
-                            <div>
-                                <h4>Teléfono:</h3>
-                                    <p>
-                                        <%= contacto.telefono %>
-                                    </p>
-                            </div>
-
-                            <div>
-                                <h4>Dirección:</h3>
-                                    <p>
-                                        <%= contacto.direccion %>
-                                    </p>
-                            </div>
-
-                            <div>
-                                <h4>Fecha de Nacimiento:</h3>
-                                    <p>
-                                        <%= contacto.fechaNacimiento %>
-                                    </p>
-                            </div>
-
-                            <div>
-                                <h4>Email:</h3>
-                                    <p>
-                                        <%= contacto.email %>
-                                    </p>
-                            </div>
-
-                        </article>
-
-                        <div class="detail-botons">
-                            <a href="/contactoEdit/<%= contacto.id %>"><button><i
-                                        class="fa-solid fa-pen-to-square"></i></button></a>
-
-                            <form action="/delete/<%= contacto.id %>?_method=DELETE" method="POST">
-                                <button type="submit" onclick='return confirmDelete()'><i
-                                        class="fa-solid fa-trash"></i></button>
-                            </form>
+                        <div class="detalle">
+                        
+                            <li class="dato">Nombre: <%= contacto.nombre %></li>
+                            <li class="dato">Apellido: <%= contacto.apellido %></li>
+                            <li class="dato">Teléfono: <%= contacto.telefono %></li>
+                            <li class="dato">Dirección: <%= contacto.direccion %></li>
+                            <li class="dato">Fecha de Nacimiento: <%= contacto.fechaNacimiento %></li>
+                            <li class="dato">Email: <%= contacto.email %></li>
                         </div>
-                    </div>
+
+                    </article>
+
+                    <article class="botones-detalle">
+
+                        <a href="/contactoEdit/<%= contacto.id %>">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </a>
+
+                        <form action="/delete/<%= contacto.id %>?_method=DELETE" method="POST">
+                            <button class="delete" type="submit" onclick='return confirmDelete()'>
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </form>
+                        
+                    </article>
+
+                    
                 </section>
 
             </main>

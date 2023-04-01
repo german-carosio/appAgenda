@@ -13,36 +13,57 @@
 
                 <section class="section">
 
-                    <div class="cabecera-noIndex">
-                        <a href="/"><i class="fa-solid fa-chevron-left"></i></a>
-                        <h2 class="titulo-section">Editar Contacto</h2>
-                    </div>
+                    <article class="cabecera-noIndex">
 
-                    <div class="contenedor-section">
-                        <form action="/contactoEdit/<%= contacto.id %>?_method=PUT" method="POST">
+                        <a href="/contacto/<%= contacto.id %>"><i class="fa-solid fa-chevron-left"></i></a>
+                        <h2>Editar contacto</h2>
+                       
+                    </article>
 
-                            <label for="nombre">Nombre</label>
-                            <input type="text" name="nombre" id="nombre" value="<%= contacto.nombre %>">
+                    <article class="listaContactos">
 
-                            <label for="apellido">Apellido</label>
-                            <input type="text" name="apellido" id="apellido" value="<%= contacto.apellido %>">
+                        <form class="lista" action="/contactoEdit/<%= contacto.id %>?_method=PUT" method="POST">
 
-                            <label for="telefono">teléfono</label>
-                            <input type="text" name="telefono" id="telefono" value="<%= contacto.telefono %>">
+                            <div class="input">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" name="nombre" id="nombre" value="<%= contacto.nombre %>">
+                            </div>
+                            
+                            <div class="input">
+                                <label for="apellido">Apellido</label>
+                                <input type="text" name="apellido" id="apellido" value="<%= contacto.apellido %>">
+                            </div>
+                            
+                            <div class="input">
+                                <label for="telefono">teléfono</label>
+                                <input type="text" name="telefono" id="telefono" value="<%= contacto.telefono %>">
+                            </div>
+                            
+                            <div class="input">
+                                <label for="direccion">Dirección</label>
+                                <input type="text" name="direccion" id="direccion" value="<%= contacto.direccion %>">
+                            </div>
+                            
+                            <div class="input">
+                                <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                                <input type="date" name="fechaNacimiento" id="fechaNacimiento" value="<%= contacto.fechaNacimiento %>">
+                            </div>
+                            
+                            <div class="input">
+                                <label for="email">Email</label>
+                                <input type="text" name="email" id="email" value="<%= contacto.email %>">
+                            </div>
 
-                            <label for="direccion">Dirección</label>
-                            <input type="text" name="direccion" id="direccion" value="<%= contacto.direccion %>">
-
-                            <label for="fechaNacimiento">Fecha de Nacimiento</label>
-                            <input type="date" name="fechaNacimiento"
-                                id="fechaNacimiento" value="<%= contacto.fechaNacimiento %>">
-
-                            <label for="email">Email</label>
-                            <input type="text" name="email" id="email" value="<%= contacto.email %>">
-
-                            <input class="submit" type="submit" value="Editar">
+                            
+                            <button type="submit">Editar</button>
                         </form>
-                    </div>
+
+                    </article>
+
+
+                   
+                        
+                    
                 </section>
 
             </main>

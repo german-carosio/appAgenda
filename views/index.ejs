@@ -10,47 +10,48 @@
         <%- include ("./partials/header") %>
 
             <main class="main">
-                
-                <section class="section">
-                                
-                    <div class="contenedor-section">
-                
-                        <div class="cabecera">
 
-                            <div class="botones-cabecera">
-                                <a href="/contactoCreate"><i class="fa-solid fa-user-plus"></i></a>
-                                <i  onclick="mostrarBusqueda()" class="fa-solid fa-magnifying-glass"></i>
-                            </div>
-                            
-                            <div id="busqueda" class="busqueda">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                                <input type="text" name="buscador" id="buscador" placeholder="Buscar..." autofocus>
-                                <i onclick="ocultarBusqueda()" class="fa-solid fa-x"></i>
-                            </div>
-                
+                <section class="section">
+
+                    <article class="cabecera">
+
+                        
+                        <div class="botones-cabecera">
+                            <a href="/contactoCreate"><i class="fa-solid fa-user-plus"></i></a>
+                            <i onclick="return mostrarBusqueda()" class="fa-solid fa-magnifying-glass"></i>
                         </div>
-                
-                
-                        <ul class="listaAgenda">
-                
+
+                        <div id="busqueda" class="busqueda">
+                            <input id="buscador" class="buscador" type="text" placeholder="Buscar...">
+                            <i onclick="return ocultarBusqueda()" class="fa-sharp fa-solid fa-xmark"></i>
+                        </div>
+
+                    </article>
+
+
+                    <article class="listaContactos">
+                        <ul class="lista">
+
                             <% agenda.forEach(element=> { %>
-                
-                                <li class="item"></i><a href="/contacto/<%= element.id %>">
+
+                                <li class="item"></i><a class="item-link" href="/contacto/<%= element.id %>">
                                         <%= element.nombre %>
                                             <%= element.apellido %>
                                     </a></li>
-                
+
                                 <% }) %>
-                
                         </ul>
-                    </div>
+                    </article>
+
+
+
                 </section>
 
             </main>
 
             <!--footer-->
             <%- include ("./partials/footer") %>
-            <script src="/js/buscar.js"></script>
+                <script src="/js/buscar.js"></script>
     </body>
 
 </html>

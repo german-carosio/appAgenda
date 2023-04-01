@@ -18,5 +18,45 @@
 		"email": "mengano@Apolo.com.ar",
 		"fechaNacimiento": "2023-03-09",
 		"creador": 1
+	},
+	{
+		"id": 3,
+		"nombre": "Manuel",
+		"apellido": "Apolo",
+		"telefono": "1158452145",
+		"direccion": "Conesa 2524 2° B",
+		"email": "apolomanu@gmail.com",
+		"fechaNacimiento": "2023-02-02",
+		"creador": 1
+	},
+	{
+		"id": 4,
+		"nombre": "Laura",
+		"apellido": "Noba",
+		"telefono": "1157856545",
+		"direccion": "Jaramillo 785",
+		"email": "nobalau@gmail.com",
+		"fechaNacimiento": "2023-02-02",
+		"creador": 1
+	},
+	{
+		"id": 5,
+		"nombre": "Pedro",
+		"apellido": "Ordoñez",
+		"telefono": "1125654852",
+		"direccion": "Niceto Vega 25 1° A",
+		"email": "mengano@Apolo.com.ar",
+		"fechaNacimiento": "2009-06-10",
+		"creador": 1
+	},
+	{
+		"id": 6,
+		"nombre": "Juan",
+		"apellido": "Solis",
+		"telefono": "1111",
+		"direccion": "sdasdas",
+		"email": "mengano@Apolo.com.ar",
+		"fechaNacimiento": "2023-03-09",
+		"creador": 1
 	}
 ]
