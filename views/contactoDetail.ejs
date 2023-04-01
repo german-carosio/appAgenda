@@ -34,17 +34,41 @@
                        
                     </article>
                     
-                    
                     <article class="listaContactos">
 
                         <div class="detalle">
-                        
-                            <li class="dato">Nombre: <%= contacto.nombre %></li>
-                            <li class="dato">Apellido: <%= contacto.apellido %></li>
-                            <li class="dato">Teléfono: <%= contacto.telefono %></li>
-                            <li class="dato">Dirección: <%= contacto.direccion %></li>
-                            <li class="dato">Fecha de Nacimiento: <%= contacto.fechaNacimiento %></li>
-                            <li class="dato">Email: <%= contacto.email %></li>
+                            
+                            <div>
+                                <p class="dato">Nombre</p>
+                                <p class="resultado"><%= contacto.nombre %></p>
+                            </div>
+
+                            <div>
+                                <p class="dato">Apellido</p>
+                                <p class="resultado"><%= contacto.apellido %></p>
+                            </div>
+
+                            <div>
+                                <p class="dato">Teléfono</p>
+                                <p class="resultado"><%= contacto.telefono %></p>
+                            </div>
+
+                            <div>
+                                <p class="dato">Dirección</p>
+                                <p class="resultado"><%= contacto.direccion %></p>
+                            </div>
+
+                            <div>
+                                <p class="dato">Fecha de Nacimiento</p>
+                                <p class="resultado"><%= contacto.fechaNacimiento %></p>
+                            </div>
+
+                            <div>
+                                <p class="dato">Email</p>
+                                <p class="resultado"><%= contacto.email %></p>
+                            </div>
+                            
+                            
                         </div>
 
                     </article>
@@ -62,6 +86,7 @@
                         </form>
                         
                     </article>
+                    
 
                     
                 </section>
