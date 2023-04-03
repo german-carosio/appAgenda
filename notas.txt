@@ -1,3 +1,5 @@
 https://www.youtube.com/watch?v=bnCOyGaSe84 // deploy con RENDER
 
+//averiguar sobre Netlify
+
 https://dashboard.render.com/web/srv-cgi80aqk728gl5vslc50/deploys/dep-cgi87iseoogvqrkg3jbg // link de proyecto en RENDER
